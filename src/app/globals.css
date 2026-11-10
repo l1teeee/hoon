@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+  --font-sans: var(--font-inter-tight), Arial, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+@keyframes title-fonts {
+  0% { font-family: var(--font-cormorant); }
+  10% { font-family: var(--font-quicksand); }
+  20% { font-family: var(--font-pinyon); }
+  30% { font-family: var(--font-fredoka); }
+  40% { font-family: var(--font-playfair); }
+  50% { font-family: var(--font-dancing); }
+  60% { font-family: var(--font-syne); }
+  70% { font-family: var(--font-comfortaa); }
+  80% { font-family: var(--font-italiana); }
+  90% { font-family: var(--font-bodoni); }
+  100% { font-family: var(--font-bodoni); }
+}
+
+.hero-title {
+  animation: title-fonts 4.5s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title {
+    animation: none;
+    font-family: var(--font-cormorant);
+  }
+}
